@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>商店商品</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body>
+    <h1>商品列表</h1>
+    <div class="product" onclick="showProductDetail('商品 A', '這是商品 A 的詳細說明。')">
+        <h3>商品 A</h3>
+        <p>價格: $100</p>
+        <button class="btn add-btn" onclick="addToCart('商品 A', 100)">加入購物車</button>
+    </div>
+    <div class="product" onclick="showProductDetail('商品 B', '這是商品 B 的詳細說明。')">
+        <h3>商品 B</h3>
+        <p>價格: $200</p>
+        <button class="btn add-btn" onclick="addToCart('商品 B', 200)">加入購物車</button>
+    </div>
+    <!-- 購物車展示區 -->
+    <div id="cart">
+        <h2>購物車</h2>
+        <ul id="cart-items"></ul>
+        <p>總金額: <span id="total">0</span> 元</p>
+    </div>
+    <!-- 商品詳情彈窗 -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
